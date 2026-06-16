@@ -1,3 +1,4 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,11 +11,11 @@
     margin:0;
     padding:0;
     box-sizing:border-box;
-    font-family:Arial, sans-serif;
+    font-family:Arial, Helvetica, sans-serif;
 }
 
 body{
-    background: linear-gradient(135deg,#ffffff,#fff6cc);
+    background:linear-gradient(135deg,#ffffff,#fff8d6);
     min-height:100vh;
     display:flex;
     justify-content:center;
@@ -23,24 +24,39 @@ body{
 }
 
 .container{
-    background:white;
     width:100%;
-    max-width:700px;
-    padding:40px;
+    max-width:750px;
+    background:#ffffff;
     border-radius:20px;
-    box-shadow:0 10px 30px rgba(0,0,0,0.15);
+    padding:40px;
+    box-shadow:0 10px 30px rgba(0,0,0,0.12);
+    border-top:6px solid #ff9900;
 }
 
+.logo{
+    text-align:center;
+    margin-bottom:25px;
+}
+
+/* Replace logo.png with your logo filename */
+.logo img{
+    max-width:220px;
+    width:100%;
+    height:auto;
+}
+
+/* Temporary placeholder if logo isn't uploaded yet */
 .logo-placeholder{
-    width:180px;
-    height:80px;
-    margin:0 auto 25px;
+    width:220px;
+    height:90px;
+    margin:0 auto;
     border:3px dashed #ff9900;
+    border-radius:12px;
     display:flex;
-    align-items:center;
     justify-content:center;
+    align-items:center;
     color:#777;
-    border-radius:10px;
+    font-weight:bold;
 }
 
 h1{
@@ -53,6 +69,7 @@ h1{
     text-align:center;
     color:#666;
     margin-bottom:30px;
+    line-height:1.5;
 }
 
 form{
@@ -60,7 +77,8 @@ form{
     gap:15px;
 }
 
-input, textarea{
+input,
+textarea{
     width:100%;
     padding:14px;
     border:2px solid #e5e5e5;
@@ -68,13 +86,14 @@ input, textarea{
     font-size:16px;
 }
 
-input:focus, textarea:focus{
+input:focus,
+textarea:focus{
     outline:none;
     border-color:#0066cc;
 }
 
 textarea{
-    min-height:150px;
+    min-height:160px;
     resize:vertical;
 }
 
@@ -82,9 +101,10 @@ button{
     background:#ff9900;
     color:white;
     border:none;
+    border-radius:10px;
     padding:15px;
     font-size:18px;
-    border-radius:10px;
+    font-weight:bold;
     cursor:pointer;
     transition:0.3s;
 }
@@ -105,18 +125,25 @@ button:hover{
 
 <div class="container">
 
-    <!-- Replace this with your logo image -->
-    <div class="logo-placeholder">
-        YOUR LOGO HERE
+    <div class="logo">
+
+        <!-- OPTION 1: Uncomment this after uploading your logo -->
+        <!-- <img src="logo.png" alt="Company Logo"> -->
+
+        <!-- OPTION 2: Placeholder until logo is uploaded -->
+        <div class="logo-placeholder">
+            YOUR LOGO HERE
+        </div>
+
     </div>
 
     <h1>Request a Quote</h1>
 
     <p class="subtitle">
-        Complete the form below and we'll get back to you.
+        Fill out the form below and we'll get back to you as soon as possible.
     </p>
 
-    <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+    <form action="https://formspree.io/f/xaqzkazb" method="POST">
 
         <input
             type="text"
@@ -127,7 +154,7 @@ button:hover{
         <input
             type="email"
             name="email"
-            placeholder="Your Email"
+            placeholder="Your Email Address"
             required>
 
         <input
@@ -137,7 +164,7 @@ button:hover{
 
         <textarea
             name="quote_details"
-            placeholder="Tell us what quote you need..."
+            placeholder="Please tell us what quote you need..."
             required></textarea>
 
         <button type="submit">
@@ -147,10 +174,11 @@ button:hover{
     </form>
 
     <div class="footer">
-        We'll respond as soon as possible.
+        Thank you for your enquiry.
     </div>
 
 </div>
 
 </body>
 </html>
+```
